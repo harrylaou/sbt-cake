@@ -7,8 +7,8 @@ package net.cakesolutions
 
 import com.lucidchart.sbt.scalafmt.ScalafmtCorePlugin
 import com.lucidchart.sbt.scalafmt.ScalafmtCorePlugin.autoImport._
-import sbt._
 import sbt.Keys._
+import sbt._
 import wartremover._
 
 // scalastyle:off magic.number

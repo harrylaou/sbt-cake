@@ -11,8 +11,8 @@ import scala.util._
 
 import com.lucidchart.sbt.scalafmt.ScalafmtCorePlugin.autoImport._
 import io.gatling.sbt.GatlingPlugin
-import sbt._
 import sbt.Keys._
+import sbt._
 import scoverage.ScoverageKeys._
 
 /**

@@ -11,8 +11,8 @@ import java.time.format.DateTimeFormatter
 import scala.util._
 import scala.util.matching.Regex
 
-import sbt._
 import sbt.Keys._
+import sbt._
 
 /**
   * Dynamic versioning plugin
