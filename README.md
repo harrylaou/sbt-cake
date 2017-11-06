@@ -191,6 +191,10 @@ Docker container version number may be specified at the SBT command line by sett
 The following configuration settings can be modified in projects that enable this plugin:
 * `dockerRepository` (set to the value of `DOCKER_REPOSITORY` or the project name) - used to define where the container
   will be published
+  
+The following configuration settings can be modified in projects that enable this plugin:
+* `dockerPublishTags`  (empty by default) - allows extra tags to be added to the docker:publish other than 
+`latest` and `version`. 
 
 ### SBT Tasks
 

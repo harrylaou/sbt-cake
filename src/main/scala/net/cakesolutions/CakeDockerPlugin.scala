@@ -42,6 +42,12 @@ object CakeDockerPlugin extends AutoPlugin {
     packageName in Docker := name.value,
     maintainer in Docker := "Cake Solutions <devops@cakesolutions.net>",
     version in Docker := sys.props.get("tag").getOrElse(version.value),
+    dockerPublishTags := Seq(),
+    dockerBuildOptions ++= {
+      val alias = dockerAlias.value
+      dockerPublishTags.value
+        .flatMap(tag => List("-t", alias.copy(tag = Some(tag)).versioned))
+    },
     dockerCommands += {
       val dockerArgList =
         CakeBuildInfoKeys.generalInfo.value ++
@@ -100,5 +106,14 @@ object CakeDockerPluginKeys {
   val dockerRemove: TaskKey[Unit] =
     taskKey[Unit](
       "Runs `docker rmi -f <ids>` for the images associated to the scope"
+    )
+
+  /**
+    * Setting key defining extra tags that will be added to the
+    * dockerBuildOptions
+    */
+  val dockerPublishTags: SettingKey[Seq[String]] =
+    settingKey[Seq[String]](
+      "Extra tags to publish other than version and latest"
     )
 }
