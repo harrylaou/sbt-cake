@@ -69,24 +69,6 @@ enablePlugins(ScalafmtPlugin)
 // TODO: CO-68: remove JSR305 dependency when SBT moves away from Scala 2.10
 libraryDependencies += jsr305 % "provided"
 
-//dependencyOverrides ++= Set(
-//  jsr305,
-//  guava,
-//  typesafeConfig,
-//  SbtDependencies.Coursier.cache,
-//  SbtDependencies.Coursier.core,
-//  SbtDependencies.packager,
-//  ApacheCommons.codec,
-//  ApacheCommons.logging,
-//  ApacheCommons.compress,
-//  ApacheCommons.lang3,
-//  httpClient,
-//  levelDbJni,
-//  quasiQuotes,
-//  Slf4j.api,
-//  Webjars.locator
-//)
-
 // For publishing this plugin to Sonatype in CI environments
 publishMavenStyle := true
 publishArtifact in Test := false
