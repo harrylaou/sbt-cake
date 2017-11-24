@@ -99,24 +99,24 @@ object CakePlatformDependencies {
 
   object SbtDependencies {
     val buildInfo: ModuleID = "com.eed3si9n" % "sbt-buildinfo" % "0.7.0"
-    val digest: ModuleID = "com.typesafe.sbt" % "sbt-digest" % "1.1.3"
+    val digest: ModuleID = "com.typesafe.sbt" % "sbt-digest" % "1.1.4"
     val dynver: ModuleID = "com.dwijnand" % "sbt-dynver" % "1.2.0"
-    val gatling: ModuleID = "io.gatling" % "gatling-sbt" % "2.2.1"
+    val gatling: ModuleID = "io.gatling" % "gatling-sbt" % "2.2.2"
     val git: ModuleID = "com.typesafe.sbt" % "sbt-git" % "0.9.3"
     val gzip: ModuleID = "com.typesafe.sbt" % "sbt-gzip" % "1.0.2"
     val header: ModuleID = "de.heikoseeberger" % "sbt-header" % "2.0.0"
     val packager: ModuleID =
-      "com.typesafe.sbt" % "sbt-native-packager" % "1.2.2"
-    val pgp: ModuleID = "com.jsuereth" % "sbt-pgp" % "1.0.1"
-    val scalafmt: ModuleID = "com.lucidchart" % "sbt-scalafmt-coursier" % "1.10"
+      "com.typesafe.sbt" % "sbt-native-packager" % "1.3.2"
+    val pgp: ModuleID = "com.jsuereth" % "sbt-pgp" % "1.1.0"
+    val scalafmt: ModuleID = "com.lucidchart" % "sbt-scalafmt-coursier" % "1.14"
     val scalastyle: ModuleID =
       "org.scalastyle" %% "scalastyle-sbt-plugin" % "0.8.0"
     val scoverage: ModuleID = "org.scoverage" % "sbt-scoverage" % "1.5.0"
     val sonatype: ModuleID = "org.xerial.sbt" % "sbt-sonatype" % "2.0"
-    val wartRemover: ModuleID = "org.wartremover" % "sbt-wartremover" % "2.1.0"
+    val wartRemover: ModuleID = "org.wartremover" % "sbt-wartremover" % "2.2.1"
 
     object Coursier {
-      val version = "1.0.0-RC10"
+      val version = "1.0.0-RC13"
 
       val sbt: ModuleID = "io.get-coursier" % "sbt-coursier" % version
       val cache: ModuleID = "io.get-coursier" %% "coursier-cache" % version
