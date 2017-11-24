@@ -52,6 +52,7 @@ object ReleaseNotesPlugin extends AutoPlugin {
   )
 
   private object Defaults {
+
     val checkReleaseNoteSettings: Def.Initialize[Task[Unit]] = Def.taskDyn {
       require(
         issueManagementUrl.value.nonEmpty,

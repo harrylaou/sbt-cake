@@ -1,6 +1,7 @@
 // Copyright: 2017 https://github.com/cakesolutions/sbt-cake/graphs
 // License: http://www.apache.org/licenses/LICENSE-2.0
 
+import net.cakesolutions.CakePlatformDependencies._
 import net.cakesolutions.CakePlatformDependencies.SbtDependencies._
 
 // An SBT source generator is used to copy centralised library dependencies
@@ -32,3 +33,7 @@ addSbtPlugin(scalastyle)
 addSbtPlugin(scalafmt)
 
 libraryDependencies += "org.scala-sbt" % "scripted-plugin" % sbtVersion.value
+
+dependencyOverrides ++= Set(
+  quasiQuotes
+)
